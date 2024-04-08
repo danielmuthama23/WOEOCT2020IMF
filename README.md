@@ -1,22 +1,25 @@
-"# WOEOCT2020IMF" 
+# WOEOCT2020IMF
 
-Overall
+## Overall
+
 All work should follow the PEP8 style guide
 Jupyter notebook part
-Dataset
+
+## Dataset
 https://www.imf.org/en/Publications/WEO/weo-database/2020/October/download-entire-database
 https://www.imf.org/~/media/Files/Publications/WEO/WEO-Database/2020/02/WEOOct2020all.ashx
 
-Goal
+## Goal
 Learn to analyze the data
 
-Technologies used
+## Technologies used
 https://pandas.pydata.org/
 https://www.anaconda.com/products/individual
 https://scikit-learn.org/stable/
 https://numpy.org/doc/stable/user/quickstart.html
 https://jupyter.org/
-Tasks
+
+## Tasks
 Find top 10 countries that grew "Gross domestic product per capita" the most over the last decade
 Draw OECD countries' "Population" growth over the last decade
 Save the GDP growth figures in separate charts and save them as PNG files
@@ -31,13 +34,15 @@ Find the top 5 fields/features that contribute the most to the predictions
 Train another predictor that uses those top 5 features
 Save the predictor in a file
 
-HTTP API development
-Goal
+## HTTP API development
+## Goal
 Learn to serve the trained model
-Used technologies
+
+## Used technologies
 https://scikit-learn.org/stable/
 https://flask.palletsprojects.com/en/1.1.x/
-Tasks
+
+## Tasks
 
 Create HTTP endpoint (WEB API) (use Flask):
 The endpoint should accept JSON body using these fields: "continent, population, Gross national savings" and previously found top 5 features (6d task)
