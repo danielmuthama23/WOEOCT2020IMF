@@ -1,54 +1,85 @@
+
+
 # WOEOCT2020IMF
 
-## Overall
+## Overview
 
-All work should follow the PEP8 style guide
-Jupyter notebook part
+This project involves analyzing the World Economic Outlook (WEO) dataset from the International Monetary Fund (IMF), with a focus on predicting and clustering various economic indicators. The work is conducted using Python, following the PEP8 style guide, and is primarily done in Jupyter notebooks.
 
 ## Dataset
-https://www.imf.org/en/Publications/WEO/weo-database/2020/October/download-entire-database
-https://www.imf.org/~/media/Files/Publications/WEO/WEO-Database/2020/02/WEOOct2020all.ashx
+
+- [WEO October 2020 Database - IMF](https://www.imf.org/en/Publications/WEO/weo-database/2020/October/download-entire-database)
+- [WEO October 2020 Data File](https://www.imf.org/~/media/Files/Publications/WEO/WEO-Database/2020/02/WEOOct2020all.ashx)
 
 ## Goal
-Learn to analyze the data
 
-## Technologies used
-https://pandas.pydata.org/
-https://www.anaconda.com/products/individual
-https://scikit-learn.org/stable/
-https://numpy.org/doc/stable/user/quickstart.html
-https://jupyter.org/
+The primary goal of this project is to learn how to analyze economic data, perform clustering, and predict GDP per capita using machine learning techniques.
 
-## Tasks
-Find top 10 countries that grew "Gross domestic product per capita" the most over the last decade
-Draw OECD countries' "Population" growth over the last decade
-Save the GDP growth figures in separate charts and save them as PNG files
-Create 5 clusters out of the countries using GDP and "Volume of exports of goods"
-draw the charts (x-axis - GDP, y - volume)
-Add labels for the top 5 countries according to the GDP on the dots representing countries in each cluster
-Find all the data fields from the year 2015 that are present in most of the countries
-Create a predictor (use scikit) to predict GDP per capita (exclude other GDP-related fields). 
-Show prediction error (MSE) on the training and the testing data sets
-Name the fields that were used during training
-Find the top 5 fields/features that contribute the most to the predictions
-Train another predictor that uses those top 5 features
-Save the predictor in a file
+## Technologies Used
 
-## HTTP API development
-## Goal
-Learn to serve the trained model
-
-## Used technologies
-https://scikit-learn.org/stable/
-https://flask.palletsprojects.com/en/1.1.x/
+- [Pandas](https://pandas.pydata.org/)
+- [Anaconda](https://www.anaconda.com/products/individual)
+- [Scikit-learn](https://scikit-learn.org/stable/)
+- [NumPy](https://numpy.org/doc/stable/user/quickstart.html)
+- [Jupyter Notebook](https://jupyter.org/)
 
 ## Tasks
 
-Create HTTP endpoint (WEB API) (use Flask):
-The endpoint should accept JSON body using these fields: "continent, population, Gross national savings" and previously found top 5 features (6d task)
-example: {"gross_nation_savings": 10, "continent": "Europe" …. }
-The returned response (JSON) should contain field shows the predicted GDP per capita
-Write an automated test (use unittest package) using flask (https://flask.palletsprojects.com/en/1.1.x/testing/#the-first-test) that would check whether the endpoint works
+### Data Analysis & Machine Learning
 
+1. **Identify Top 10 Countries by GDP Per Capita Growth:**
+   - Find the top 10 countries that had the most significant growth in "Gross domestic product per capita" over the last decade.
 
+2. **Visualize OECD Countries' Population Growth:**
+   - Plot the "Population" growth of OECD countries over the last decade.
+
+3. **Save GDP Growth Charts:**
+   - Generate and save PNG charts showing GDP growth figures.
+
+4. **Clustering Countries:**
+   - Create 5 clusters of countries based on GDP and "Volume of exports of goods".
+   - Plot the clusters (x-axis: GDP, y-axis: Volume of Exports).
+   - Label the top 5 countries by GDP within each cluster.
+
+5. **Feature Analysis for 2015 Data:**
+   - Identify the data fields from the year 2015 that are present in most countries.
+
+6. **Predictor Development:**
+   - Create a predictor (using Scikit-learn) to forecast GDP per capita, excluding other GDP-related fields.
+   - Calculate and display the Mean Squared Error (MSE) for both training and testing datasets.
+   - List the fields used during training.
+   - Identify the top 5 features that contribute the most to predictions.
+   - Train another predictor using only these top 5 features.
+   - Save the predictor to a file.
+
+### HTTP API Development
+
+#### Goal
+
+Learn how to serve the trained machine learning model via a web API.
+
+#### Technologies Used
+
+- [Scikit-learn](https://scikit-learn.org/stable/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+
+#### Tasks
+
+1. **Create HTTP Endpoint (WEB API):**
+   - Develop a Flask-based endpoint that accepts a JSON body with the following fields: "continent", "population", "Gross national savings", and the top 5 features identified in Task 6.
+   - Example JSON request:
+     ```json
+     {
+       "gross_nation_savings": 10,
+       "continent": "Europe",
+       ...
+     }
+     ```
+   - The response should be a JSON object containing the predicted GDP per capita.
+
+2. **Automated Testing:**
+   - Write an automated test using the `unittest` package to ensure that the endpoint works as expected.
+   - Reference for testing with Flask: [Flask Testing Documentation](https://flask.palletsprojects.com/en/1.1.x/testing/#the-first-test)
+
+---
 
