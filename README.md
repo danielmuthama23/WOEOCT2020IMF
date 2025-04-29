@@ -60,28 +60,28 @@ Built with Python, Flask, and Scikit-learn. [Explore the code on GitHub](https:/
 ## 🔧 API Documentation
 
 ### Endpoint
-`POST /` - Predict GDP per capita
+  `POST /` - Predict GDP per capita
 
 **Request Body**:
-{
-  "continent": "Africa",
-  "population": 50000000,
-  "Implied PPP conversion rate": 150.2,
-  "Current account balance": -3.1,
-  "Volume of exports of goods": 4.8,
-  "Gross national savings": 12.5,
-  "Inflation rate": 6.2
-}
+  {
+    "continent": "Africa",
+    "population": 50000000,
+    "Implied PPP conversion rate": 150.2,
+    "Current account balance": -3.1,
+    "Volume of exports of goods": 4.8,
+    "Gross national savings": 12.5,
+    "Inflation rate": 6.2
+  }
 
 ### Response Example
 
 **Successful Prediction**:
 
-{
-  "prediction": 1523.45,
-  "feature_importance": [
-    {"feature": "Implied PPP conversion rate", "weight": 0.32},
-    {"feature": "Volume of exports of goods", "weight": 0.28}
-  ],
-  "cluster": "Emerging Growth"
-}
+  {
+    "prediction": 1523.45,
+    "feature_importance": [
+      {"feature": "Implied PPP conversion rate", "weight": 0.32},
+      {"feature": "Volume of exports of goods", "weight": 0.28}
+    ],
+    "cluster": "Emerging Growth"
+  }
