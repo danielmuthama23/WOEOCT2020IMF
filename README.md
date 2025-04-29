@@ -63,6 +63,7 @@ Built with Python, Flask, and Scikit-learn. [Explore the code on GitHub](https:/
     `POST /` - Predict GDP per capita
 
 **Request Body**:
+
     {
       "continent": "Africa",
       "population": 50000000,
